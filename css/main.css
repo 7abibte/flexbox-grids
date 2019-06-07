@@ -99,14 +99,41 @@ textarea {
 html {
   background-color: #fff;
   height: 100%;
+    background-color: lightslategray;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1.25em;
-  height: 100%;
-  background-color: lightslategray;
+  color: #ffffff;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    font-size: 1.7em;
+    line-height: 1.5em;
+}
+
+main {
+    font-size: 1.7em;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+footer {
+    font-size: 1.3em;
+    margin: 1em 0;
+    border-top: 1px solid black;
+    padding-top: 1em;
 }
 
 .wrapper {
@@ -114,25 +141,35 @@ body {
   font-weight: 700;
     display: flex;
     justify-content: space-around;
+    flex-flow: row wrap;
+    height: 100%;
 }
 
-.div-1, .div-2, .div-3 {
+.columns {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 30%;
-  color: #fff;
   line-height: 1.5em;
   background-color: lightslategrey;
-  height: auto;
   font-size: 1.1em;
-  padding: 1em;
-  font-weight: 400;
+  height: auto;
 }
 
+/* I put the column borders in the @media query for this */
 
+p {
+    font-weight: 400;
+}
 
+.columns p {
+    
+}
+
+p span {
+    font-weight: 800;
+}
 
 /* ==========================================================================
    Helper classes
@@ -214,9 +251,9 @@ body {
    Modify as content requires.
    ========================================================================== */
 @media all and (min-width: 1200px) {
-    .div-1, .div-2 {
-      border-right: 1px solid #555;
-      padding-right: 30px;
+    #div-1, #div-2 {
+      border-right: 1px solid black;
+      padding-right: 1em;
     }
 }
 
